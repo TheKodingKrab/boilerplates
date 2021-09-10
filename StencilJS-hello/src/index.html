@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0">
+  <title>Stencil Component Starter</title>
+  <script src="/build/mycomponent.js"></script>
+
+</head>
+<body>
+
+  <div id="root"></div>
+
+  <script>
+    let el = document.createElement('hello-world');
+
+    el.name = "Test";
+    el.showButton = true;
+
+    el.addEventListener('sayName', (event) => {
+      alert(event.detail);
+    });
+
+    document.getElementById('root').appendChild(el);
+  
+  </script>
+
+  <my-component first="Stencil" last="'Don't call me a framework' JS"></my-component>
+
+</body>
+</html>
